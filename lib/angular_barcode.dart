@@ -3,4 +3,10 @@
 
 library angular_barcode;
 
-export 'src/angular_barcode_base.dart';
+import 'src/angular_barcode.dart';
+import 'src/angular_qrcode.dart';
+
+export 'src/angular_barcode.dart';
+export 'src/angular_qrcode.dart';
+
+const List ANGULAR_BARCODE_DIRECTIVES = const [AngularBarcode, AngularQrCode];

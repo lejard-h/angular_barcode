@@ -1,6 +1,6 @@
 name: angular_barcode
-description: Draw Barcode with Angular 2
-version: 0.0.1
+description: Draw Barcode and QrCode with Angular 2
+version: 0.0.2
 author: Hadrien Lejard <hadrien.lejard@gmail.com>
 homepage: https://github.com/lejard-h/angular_barcode
 

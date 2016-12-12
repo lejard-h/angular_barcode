@@ -16,8 +16,9 @@ main() {
   selector: "app",
   template: '''
     <angular-barcode #barcode value="1234567890128" [displayValue]="true" format="ean13" [width]="width"></angular-barcode>
+    <angular-qrcode data="1234567890128" size="200" color="0000ff"></angular-qrcode>
   ''',
-  directives: const [AngularBarcode],
+  directives: const [ANGULAR_BARCODE_DIRECTIVES],
 )
 class App implements OnInit {
   num width = 2;
