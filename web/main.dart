@@ -4,8 +4,8 @@
 library dart_barcode.example;
 
 import 'dart:async';
-import 'package:angular2/platform/browser.dart';
-import 'package:angular2/core.dart';
+
+import 'package:angular/angular.dart';
 import 'package:angular_barcode/angular_barcode.dart';
 
 main() {
