@@ -1,6 +1,6 @@
 # angular_barcode
 
-Draw Barcode or QrCode with Angular 2 dart
+Draw Barcode or QrCode with AngularDart
 
 ## Usage
 

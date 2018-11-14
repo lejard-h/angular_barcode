@@ -1,0 +1,19 @@
+analyzer:
+  errors:
+    todo: ignore
+    uri_has_not_been_generated: ignore    
+  strong-mode:
+    implicit-casts: true    
+  exclude:
+    - build/**
+    - debug/**
+    - release/**
+    - .dart_tool/**
+
+linter:
+  rules:
+    - avoid_empty_else
+    - cancel_subscriptions
+    - close_sinks
+    - unnecessary_const
+    - unnecessary_new
