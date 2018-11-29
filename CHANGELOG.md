@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.7
+## 0.1.0
 - Supports Dart 2
 
 ## 0.0.2

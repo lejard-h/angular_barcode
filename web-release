@@ -1,3 +1,0 @@
-#!/bin/bash
-
-webdev serve web:9090 --output web:release --release
