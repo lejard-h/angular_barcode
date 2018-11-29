@@ -1,6 +1,6 @@
-// Copyright (c) 2016, lejard_h. All rights reserved. Use of this source code
-
-// is governed by a BSD-style license that can be found in the LICENSE file.
+/// Copyright (c) 2016, lejard_h. All rights reserved. Use of this source code
+/// is governed by a BSD-style license that can be found in the LICENSE file.
+library angular_barcode_qrcode;
 
 import 'package:angular/angular.dart';
 
@@ -9,31 +9,36 @@ const _api = "https://api.qrserver.com/v1/create-qr-code/";
 @Component(
     selector: "angular-qrcode",
     template: '<img [attr.src]="url"/>',
-    inputs: const [
-      "size",
-      "data",
-      "charsetSource",
-      "charsetTarget",
-      "ecc",
-      "color",
-      "bgcolor",
-      "margin",
-      "qzone",
-      "format"
-    ],
-    providers: const [
-      AngularQrCodeService
-    ])
+    providers: [AngularQrCodeService])
 class AngularQrCode {
+  @Input()
   var size;
+
+  @Input()
   var qzone;
+
+  @Input()
   var margin;
+
+  @Input()
   String data;
+
+  @Input()
   String charsetSource;
+
+  @Input()
   String charsetTarget;
+
+  @Input()
   String ecc;
+
+  @Input()
   String color;
+
+  @Input()
   String bgcolor;
+
+  @Input()
   String format;
 
   AngularQrCodeService _service;

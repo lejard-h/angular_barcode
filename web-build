@@ -1,0 +1,5 @@
+#!/bin/bash
+
+webdev build --output web:build/web
+cd build/
+rm -r web/packages

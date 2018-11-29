@@ -1,12 +1,13 @@
-// Copyright (c) 2016, lejard_h. All rights reserved. Use of this source code
-// is governed by a BSD-style license that can be found in the LICENSE file.
+/// Copyright (c) 2016, lejard_h. All rights reserved. Use of this source code
+/// is governed by a BSD-style license that can be found in the LICENSE file.
+library angular_barcode_barcode;
 
 import 'dart:html';
 
 import 'package:angular/angular.dart';
 import 'package:dart_barcode/dart_barcode.dart';
 
-const List<String> _inputs = const [
+const List<String> _inputs = [
   "value",
   "format",
   "displayValue",
@@ -27,61 +28,76 @@ const List<String> _inputs = const [
   "marginLeft",
 ];
 
-@Component(
-    selector: "angular-barcode",
-    template: '''
+@Component(selector: "angular-barcode", template: '''
 <svg #barcode></svg>
-''',
-    inputs: const [
-      "value",
-      "format",
-      "displayValue",
-      "fontOptions",
-      "width",
-      "height",
-      "fontSize",
-      "font",
-      "textAlign",
-      "lineColor",
-      "background",
-      "text",
-      "textPosition",
-      "textMargin",
-      "margin",
-      "marginTop",
-      "marginRight",
-      "marginLeft",
-    ])
+''')
 class AngularBarcode implements OnChanges {
+  @Input()
   String value;
+
+  @Input()
   String format;
+
+  @Input()
   String fontOptions;
+
+  @Input()
   String font;
+
+  @Input()
   String textAlign;
+
+  @Input()
   String lineColor;
+
+  @Input()
   String background;
+
+  @Input()
   String text;
+
+  @Input()
   String textPosition;
+
+  @Input()
   num width;
+
+  @Input()
   num height;
+
+  @Input()
   num fontSize;
+
+  @Input()
   num textMargin;
+
+  @Input()
   num margin;
+
+  @Input()
   num marginTop;
+
+  @Input()
   num marginBottom;
+
+  @Input()
   num marginRight;
+
+  @Input()
   num marginLeft;
+
+  @Input()
   bool displayValue;
 
   Options _options;
 
   @ViewChild("barcode")
-  ElementRef barcodeElement;
+  Element barcodeElement;
 
-  Element get svg => barcodeElement.nativeElement;
+  Element get svg => barcodeElement;
 
   _refresh() {
-    _options = new Options(
+    _options = Options(
         format: format,
         displayValue: displayValue,
         textMargin: textMargin is num ? textMargin : 2,
@@ -100,7 +116,7 @@ class AngularBarcode implements OnChanges {
         textPosition: textPosition,
         lineColor: lineColor,
         background: background);
-    new DartBarcode(svg, value, _options);
+    DartBarcode(svg, value, _options);
   }
 
   @override
