@@ -9,4 +9,3 @@ export 'src/angular_barcode.dart';
 export 'src/angular_qrcode.dart';
 
 const List  angularBarcodeDirectives = [AngularBarcode, AngularQrCode];
-
